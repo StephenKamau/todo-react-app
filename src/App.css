@@ -1,38 +1,116 @@
+:root {
+    --border-radius: 4px;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ECEFF1;
+}
+
+h1 {
+    text-align: center;
+}
+
 .App {
-  text-align: center;
+    width: 50vw;
+    margin: 16px auto;
+    padding: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (max-width: 768px) {
+    .App {
+        margin: 4px auto;
+        width: 90vw;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input,
+select {
+    border: 1px solid #B0BEC5;
+    padding: 8px;
+    outline: none;
+    margin-top: 4px;
+    border-radius: var(--border-radius);
 }
 
-.App-link {
-  color: #61dafb;
+input:focus,
+select:focus {
+    border: 1px solid #044dbc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+    font-size: 1.2em;
+    margin: 4px 8px 0 8px;
+    padding: 4px 16px;
+    border-radius: var(--border-radius);
+    transition: .15s ease-in-out;
+}
+
+.primary {
+    background-color: #bbe2ff;
+    border: none;
+    color: #044dbc;
+}
+
+.secondary {
+    background-color: #bae7cd;
+    border: none;
+    color: #005e24;
+}
+
+.danger {
+    background-color: #ffcbce;
+    border: none;
+    color: #bc0404;
+}
+
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.todo {
+    background-color: #fff;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    border-radius: var(--border-radius);
+}
+
+.complete {
+    border-right: 10px solid #044dbc;
+}
+
+.pending {
+    border-right: 10px solid #bc0404;
+}
+
+.todo>li>h2 {
+    text-transform: capitalize;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ECEFF1;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
